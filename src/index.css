@@ -1,0 +1,349 @@
+
+:root {
+  --google-blue: #4285F4;
+  --google-red: #EA4335;
+  --google-yellow: #FBBC05;
+  --google-green: #34A853;
+  --text-primary: #202124;
+  --text-secondary: #70757a;
+  --border-color: #dadce0;
+  --bg-gray: #f2f2f2;
+  --hover-bg: rgba(60, 64, 67, 0.08);
+  --shadow-light: 0 1px 6px rgba(32, 33, 36, 0.08);
+  --shadow-medium: 0 1px 6px rgba(32, 33, 36, 0.28);
+}
+
+/* Base Styles */
+body {
+  margin: 0;
+  font-family: 'Google Sans', 'Roboto', Arial, sans-serif;
+  background: #fff;
+  color: var(--text-primary);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  line-height: 1.5;
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Header Styles */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 6px 20px;
+  height: 60px;
+}
+
+.header-left, .header-right {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.header a {
+  color: rgba(0, 0, 0, 0.87);
+  text-decoration: none;
+  font-size: 13px;
+  padding: 8px 0;
+  transition: all 0.2s ease;
+}
+
+.header a:hover {
+  text-decoration: underline;
+  text-underline-offset: 3.5px;
+}
+
+.apps-button {
+  background: none;
+  border: none;
+  width: 40px;
+  height: 40px;
+  padding: 8px;
+  margin: -8px;
+  cursor: pointer;
+  color: #5f6368;
+  font-size: 24px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  transition: background 0.2s ease;
+}
+
+/* Small Icons Styling */
+.header-icon {
+  width: 25px; 
+  height: 35px;
+  padding-top: 12px;
+  margin-left: 15px; 
+  cursor: pointer;
+  opacity: 0.8;
+  transition: all 0.2s ease;
+}
+
+.header-icon:hover {
+  opacity: 1; 
+  transform: scale(1.1); 
+}
+
+.header-icon1 {
+  padding-top: px;
+  width: 24px; 
+  height: 24px;
+  margin-left: 15px; 
+  cursor: pointer;
+  opacity: 0.8; 
+  transition: all 0.2s ease;
+}
+
+.header-icon1:hover {
+  opacity: 1; 
+  transform: scale(1.1); 
+}
+
+/*Search*/
+.search-container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  text-align: center;
+}
+
+/* Google Logo */
+.google-title {
+  padding-left: 70px;
+  font-size: 80px;
+  font-weight: 400;
+  margin-bottom: 20px;
+  letter-spacing: -2.5px;
+  display: flex;
+}
+
+.google-letter {
+  display: inline-block;
+}
+
+/*Google Logo Colors */
+.google-letter:nth-child(1) { color: var(--google-blue); }  /* G */
+.google-letter:nth-child(2) { color: var(--google-red); }   /* o */
+.google-letter:nth-child(3) { color: var(--google-yellow); } /* o */
+.google-letter:nth-child(4) { color: var(--google-blue); }  /* g */
+.google-letter:nth-child(5) { color: var(--google-green); } /* l */
+.google-letter:nth-child(6) { color: var(--google-red); }   /* e */
+
+.search-box {
+  width: 100%;
+  max-width: 584px;
+  margin: 0 auto;
+}
+.search-icon{
+  position: absolute;
+  left: 490px;
+  top: 300px
+ 
+}
+
+.mic-icon{
+  width: 25px;
+  height: 30px;
+  position: absolute;
+  left: 1100px;
+  top: 300px;
+  cursor: pointer;
+}
+
+.lens-icon{
+  width: 25px;
+  height: 25px;
+  position: absolute;
+  left: 1135px;
+  top: 303px;
+  cursor: pointer;
+}
+.search-input {
+  width: 100%;
+  padding: 0.8rem 4rem;
+  font-size: 1rem;
+  border: 1px solid var(--border-color);
+  border-radius: 24px;
+  outline: none;
+  margin-bottom: 1.5rem;
+  box-shadow: var(--shadow-light);
+  transition: all 0.2s ease;
+}
+
+.search-box input:hover,
+.search-box input:focus {
+  box-shadow: var(--shadow-medium);
+}
+
+.buttons {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  margin-top: 1rem;
+  padding-left: 50px;
+}
+
+.buttons button {
+  padding: 0.6rem 1rem;
+  border: 1px solid #f8f9fa;
+  background: #f8f9fa;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.875rem;
+  color: var(--text-primary);
+  transition: all 0.2s ease;
+
+}
+
+.buttons button:hover {
+  border-color: var(--border-color);
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+}
+
+.suggestion {
+  margin-top: 4rem;
+  font-size: 0.8125rem;
+  color: var(--text-secondary);
+  padding-left: 50px;
+}
+
+
+.language-links {
+  padding-left: 50px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.75rem;
+  margin-top: 1rem;
+}
+
+.language-links a {
+  color: #1a0dab;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.language-links a:hover {
+  text-decoration: underline;
+}
+
+/* Footer Styles */
+.footer {
+  background: var(--bg-gray);
+  width: 100%;
+  font-size: 0.875rem;
+}
+
+.footer-location {
+  padding: 1rem 1.25rem;
+  border-bottom: 1px solid var(--border-color);
+  color: rgba(0, 0, 0, 0.54);
+}
+
+.footer-links-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 0 1.25rem;
+}
+
+.footer-links-left,
+.footer-links-right {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  padding: 1rem 0;
+}
+
+.footer-links-left {
+  justify-content: flex-start;
+}
+
+.footer-links-right {
+  justify-content: flex-end;
+}
+
+.footer a {
+  color: var(--text-secondary);
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+}
+
+
+
+/* Microphone Styles */
+.mic-icon.active {
+  animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+  100% { transform: scale(1); }
+}
+
+/* Camera Modal Styles */
+.camera-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.camera-feed {
+  width: 80%;
+  max-width: 600px;
+  max-height: 70vh;
+  background: #000;
+  border-radius: 8px;
+}
+
+.camera-controls {
+  margin-top: 20px;
+  display: flex;
+  gap: 20px;
+}
+
+.camera-controls button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  background: #4285F4;
+  color: white;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.camera-controls button:hover {
+  background: #3367D6;
+}
+
+.capture-btn {
+  background: #34A853 !important;
+}
+
+.capture-btn:hover {
+  background: #2D8E47 !important;
+}
+
